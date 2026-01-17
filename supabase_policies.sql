@@ -1,4 +1,7 @@
--- Run these commands in your Supabase SQL Editor to fix the 401 Unauthorized error.
+-- Run these commands in your Supabase SQL Editor to fix schema errors.
+
+-- 0. Add missing relationship column if it doesn't exist
+ALTER TABLE guestbook ADD COLUMN IF NOT EXISTS relationship text;
 
 -- 1. Enable Row Level Security (good practice to keep it enabled, but define policies)
 ALTER TABLE guestbook ENABLE ROW LEVEL SECURITY;

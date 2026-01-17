@@ -7,7 +7,7 @@ export const generateBirthdayWish = async (name: string, context?: string): Prom
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
-      contents: `Generate a short, elegant, and heartfelt birthday wish for ${name}. ${context ? `Consider this context: ${context}` : ''} Keep it under 40 words and professional yet warm.`,
+      contents: `Generate a short, elegant, and heartfelt birthday wish for Babajide. ${context ? `Consider this context: ${context}` : ''} Keep it under 40 words and professional yet warm.`,
       config: {
         temperature: 0.8,
         topP: 0.95,
